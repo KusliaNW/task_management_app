@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 
 import 'package:task_management_app/app/utils/widget/header.dart';
@@ -35,7 +36,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
               !context.isPhone
               ? const header()
               : Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
               child: Row(
                 children: [
                   IconButton(
@@ -97,11 +98,173 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                   ? BorderRadius.circular(50) :
                   BorderRadius.circular(30),,
                 ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                    'My Task', 
+                style: 
+                TextStyle(color: AppColors.primaryText, fontSize: 30,
+                ),
+                ),
+                const SizedBox(
+                  height: 20,
+                  ),
+                SizedBox(
+                  height: 200,
+                  child: ListView(
+                  scrollDirection: Axis.horizontal, 
+                shrinkWrap: true, 
+                children: [
+                  Container(width: 400, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20)
+                    color: AppColors.cardBg,
+                    ),
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Row(
+                        const Spacer(),
+                        children: [
+                          ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                child: const CircleAvatar(
+                  backgroundColor: Colors.amber,
+                radius: 20,
+                foregroundImage: NetworkImage(
+                  'https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/27/08/jennifer-lawrence.jpg?quality=75&width=982&height=726&auto=webp%27'),
+                ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                child: const CircleAvatar(
+                  backgroundColor: Colors.amber,
+                radius: 20,
+                foregroundImage: NetworkImage(
+                  'https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/27/08/jennifer-lawrence.jpg?quality=75&width=982&height=726&auto=webp%27'),
+                ),
+                ),
+                const Spacer(),
+                Container(
+                  height: 25, 
+                  width: 80, 
+                color: AppColors.primaryBg, 
+                child: const Center(child: Text('100%',
+                style: TextStyle(
+                  color: AppColors.primaryText, 
+                ),
+                )),
+                )
+                        ],
+                      ),
+                      Container(height: 25, width: 80, 
+                color: AppColors.primaryBg, 
+                child: const Center(child: Text('10 / 10 Task',
+                style: TextStyle(
+                  color: AppColors.primaryText,
+                ),
+                )),
+                ),
+                const Text('Pemrograman Mobile', 
+                style: TextStyle(
+                  color: AppColors.primaryText, 
+                  fontSize: 20,
+                ),
+                ),
+                const Text('Deadline 2 Hari Lagi', 
+                style: TextStyle(
+                  color: AppColors.primaryText, 
+                  fontSize: 15,
+                ),
+                ),
+                    ]),
+                    )
+                ],
+                ),
+                )
+                SizedBox(
+                  height: 200,
+                  child: ListView(
+                  scrollDirection: Axis.horizontal, 
+                shrinkWrap: true, 
+                children: [
+                  Container(width: 400, 
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20)
+                    color: AppColors.cardBg,
+                    ),
+                    padding: const EdgeInsets.all(20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Row(
+                        const Spacer(),
+                        children: [
+                          ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                child: const CircleAvatar(
+                  backgroundColor: Colors.amber,
+                radius: 20,
+                foregroundImage: NetworkImage(
+                  'https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/27/08/jennifer-lawrence.jpg?quality=75&width=982&height=726&auto=webp%27'),
+                ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                child: const CircleAvatar(
+                  backgroundColor: Colors.amber,
+                radius: 20,
+                foregroundImage: NetworkImage(
+                  'https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/27/08/jennifer-lawrence.jpg?quality=75&width=982&height=726&auto=webp%27'),
+                ),
+                ),
+                const Spacer(),
+                Container(
+                  height: 25, 
+                  width: 80, 
+                color: AppColors.primaryBg, 
+                child: const Center(child: Text('100%',
+                style: TextStyle(
+                  color: AppColors.primaryText, 
+                ),
+                )),
+                )
+                        ],
+                      ),
+                      Container(height: 25, width: 80, 
+                color: AppColors.primaryBg, 
+                child: const Center(child: Text('10 / 10 Task',
+                style: TextStyle(
+                  color: AppColors.primaryText,
+                ),
+                )),
+                ),
+                const Text('Pemrograman Mobile', 
+                style: TextStyle(
+                  color: AppColors.primaryText, 
+                  fontSize: 20,
+                ),
+                ),
+                const Text('Deadline 2 Hari Lagi', 
+                style: TextStyle(
+                  color: AppColors.primaryText, 
+                  fontSize: 15,
+                ),
+                ),
+                    ]),
+                    )
+                ],
+                ),
+                ),
+                ]),
               ),
               )
             ]),
           )
       ],
-    ));
+    ),
+    );
   }
 }
