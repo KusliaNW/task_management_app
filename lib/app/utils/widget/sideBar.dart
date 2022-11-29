@@ -1,4 +1,7 @@
+import 'package:get/get.dart';
+import 'package:task_management_app/app/routes/app_pages.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
+import 'package:flutter/material.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({
@@ -23,7 +26,7 @@ class SideBar extends StatelessWidget {
               width: double.infinity,
               alignment: Alignment.topCenter,
         child: const Image(
-          image: AssetImage('assets/icons/icon.png'),
+          image: AssetImage('assets/icons/Icon.png'),
         ),
         ),
         const SizedBox(height: 50,
@@ -45,8 +48,8 @@ class SideBar extends StatelessWidget {
                   : const BoxDecoration(),
                   child: Icon(
                     Get.currentRoute == '/home' 
-                    ? Ionicons.desktop 
-                    : Ionicons.dekstop_outline, 
+                    ? Icons.desktop_mac
+                    : Icons.desktop_mac_outlined, 
                     color: AppColors.primaryText, 
                     size: 30
                     ),
@@ -84,8 +87,8 @@ class SideBar extends StatelessWidget {
                   : const BoxDecoration(),
                   child: Icon(
                     Get.currentRoute == '/tast' 
-                    ? Ionicons.cube
-                    : Ionicons.cube_outline, 
+                    ? Icons.rectangle
+                    : Icons.rectangle_outlined, 
                     color: AppColors.primaryText, 
                     size: 30
                     ),
@@ -121,8 +124,8 @@ class SideBar extends StatelessWidget {
                   : const BoxDecoration(),
                   child: Icon(
                     Get.currentRoute == '/friends' 
-                    ? Ionicons.heart
-                    : Ionicons.heart_outline, 
+                    ? Icons.heart_broken
+                    : Icons.heart_broken, 
                     color: AppColors.primaryText, 
                     size: 30
                     ),
@@ -158,8 +161,8 @@ class SideBar extends StatelessWidget {
                   : const BoxDecoration(),
                   child: Icon(
                     Get.currentRoute == '/profile' 
-                    ? Ionicons.person
-                    : Ionicons.person_outline, 
+                    ? Icons.person
+                    : Icons.person_outline, 
                     color: AppColors.primaryText, 
                     size: 30
                     ),

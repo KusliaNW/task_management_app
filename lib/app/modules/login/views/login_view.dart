@@ -107,13 +107,13 @@ class LoginView extends GetView<LoginController> {
                 ])
                 :const SizedBox(),
               Image.asset(
-                'assets/images/login.png',
+                'assets/images/Login.png',
                 height: Get.height * 0.5,
               ),
               FloatingActionButton.extended(
                 onPressed: () => Get.toNamed(Routes.HOME),
                 label: const Text('Sign In with Google'),
-                icon: const Icon(Ionicons.logo_google, color: Colors.white),
+                icon: const Icon(Icons.grid_on, color: Colors.white),
                 )
             ]),
           ),

@@ -1,4 +1,8 @@
+import 'package:get/get.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
+import 'package:flutter/material.dart';
+
+import '../../routes/app_pages.dart';
 
 class header extends StatelessWidget {
   const header({
@@ -53,7 +57,7 @@ class header extends StatelessWidget {
                 const SizedBox(
                   width: 20,
                   ),
-                const Icon(Ionicons.notifications, 
+                const Icon(Icons.notifications, 
                 color: AppColors.primaryText, size: 30),
                 const SizedBox(
                   width: 20,
@@ -83,7 +87,7 @@ class header extends StatelessWidget {
                     width: 5,
                       ),
                       Icon(
-                        Ionicons.log_outline, 
+                        Icons.logout, 
                       color: AppColors.primaryText,
                       size: 30,
                     ),

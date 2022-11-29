@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-import 'package:ionicons/ionicons.dart';
+// import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
 import 'package:task_management_app/app/utils/widget/sideBar.dart';
@@ -38,7 +38,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                   onPressed: () {
                     _drawerKey.currentState!.openDrawer();
                   }, 
-                  icon: Icons(
+                  icon: Icon(
                     Icons.menu, color: AppColors.primaryText,
                 ),
                 ),
@@ -61,7 +61,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
             ),
             const Spacer(),
             const Icon(
-              Ionicons.notifications, 
+              Icons.notifications, 
                 color: AppColors.primaryText, 
                 size: 30
                 ),
@@ -91,7 +91,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                   color: Colors.white,
                   borderRadius: !context.isPhone
                   ? BorderRadius.circular(50) :
-                  BorderRadius.circular(30),,
+                  BorderRadius.circular(30),
                 ),
               ),
               )
