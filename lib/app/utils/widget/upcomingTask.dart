@@ -67,7 +67,9 @@ class UpcomingTask extends StatelessWidget {
                           height: 25, 
                           width: 80, 
                       color: AppColors.primaryBg, 
-                      child: const Center(child: Text('100%',
+                      child: const Center(
+                        child: Text(
+                          '100%',
                       style: TextStyle(
                           color: AppColors.primaryText, 
                       ),
@@ -75,22 +77,28 @@ class UpcomingTask extends StatelessWidget {
                       )
           ],
         ),
+        const Spacer()
         Container(
-          height: 25, width: 80, 
+          height: 25, 
+          width: 80, 
                       color: AppColors.primaryBg, 
-                      child: const Center(child: Text('10 / 10 Task',
+                      child: const Center(
+                        child: Text(
+                          '10 / 10 Task',
                       style: TextStyle(
                           color: AppColors.primaryText,
                       ),
                       )),
                       ),
-                      const Text('Pemrograman Mobile', 
+                      const Text(
+                        'Pemrograman Mobile', 
                       style: TextStyle(
                           color: AppColors.primaryText, 
                           fontSize: 20,
                       ),
                       ),
-                      const Text('Deadline 2 Hari Lagi', 
+                      const Text(
+                        'Deadline 2 Hari Lagi', 
                       style: TextStyle(
                           color: AppColors.primaryText, 
                           fontSize: 15,
@@ -98,6 +106,14 @@ class UpcomingTask extends StatelessWidget {
                       ),
                             ]),
                             ),
+                            Container(
+                              height: 200,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color: AppColors.cardBg,
+                              ),
+                              margin: const EdgeInsets.all(10),
+                            )
                       ],
                       ),
                       ),
