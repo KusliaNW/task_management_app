@@ -51,17 +51,15 @@ class MyFriends extends StatelessWidget {
               child: GridView.builder(
                 shrinkWrap: true,
               itemCount: 8,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: context.isPhone ? 2 : 3,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20),
                 itemBuilder: (context, index) {
                   return Column(
                     children: [
                       ClipRRect(
-                    borderRadius: 
-                    BorderRadius.
-                    circular(100),
+                    borderRadius: BorderRadius.circular(100),
                   child: const Image(
                     image: NetworkImage(
                     'https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/09/27/08/jennifer-lawrence.jpg?quality=75&width=982&height=726&auto=webp%27'),
