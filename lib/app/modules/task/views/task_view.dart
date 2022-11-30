@@ -99,16 +99,16 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                              'My Task', 
+                                'My Task', 
                       style: TextStyle(
                         color: AppColors.primaryText, 
                         fontSize: 30,
                       ),
                       ),
                       SizedBox(
-                    height: 20,
-                  ),
-                  Expanded(
+                        height: 20,
+                      ),
+                      Expanded(
                         child: ListView.builder(
                           itemCount: 8,
                           clipBehavior: Clip.antiAlias,
@@ -160,7 +160,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                       )
           ],
         ),
-        const Spacer()
+        const Spacer(),
         Container(
           height: 25, 
           width: 80, 
@@ -171,7 +171,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                       style: TextStyle(
                           color: AppColors.primaryText,
                       ),
-                      )),
+                      ),),
                       ),
                       const Text(
                         'Pemrograman Mobile', 
@@ -185,39 +185,42 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                       style: TextStyle(
                           color: AppColors.primaryText, 
                           fontSize: 15,
-                          ),
-                        ),
+                      ),
+                      ),
+                            ]),
+                            );
+                      },
+                      ),
                       ),
                     ],
                   ),
                 ),
-                )
+              )
             ]),
           )
         ],
       ),
       floatingActionButton: Align(
-        alignment: const Alignment(0.95, 0.95),
+        alignment: Alignment(0.95, 0.95),
         child: FloatingActionButton.extended(
-          onPressed: (){
+          onPressed: () {
             Get.bottomSheet(
               Container(
-                margin: context.isPhone
-                ? EdgeInsets.zero
-                : EdgeInsets.only(left: 150, right: 150),
+                padding: EdgeInsets.only(left: 150, right: 150),
                 height: Get.height,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20)), 
-                    color: Colors.white
-                    ),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20)
+              ),
+              color: Colors.white,
+              ),
             ),
             );
           }, 
-          label: const Text('Add Task'),
-        icon: const Icon(Icons.add),
-        ),
+          label: Text('Add Task'), 
+          icon: Icon(Icons.add)
+          ),
       ),
     );
   }

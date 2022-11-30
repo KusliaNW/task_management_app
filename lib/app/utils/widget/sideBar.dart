@@ -182,7 +182,6 @@ class SideBar extends StatelessWidget {
             ),
             ),
         ),
-        
         ],
         ),
         ),

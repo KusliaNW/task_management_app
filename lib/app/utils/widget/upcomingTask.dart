@@ -77,7 +77,7 @@ class UpcomingTask extends StatelessWidget {
                       )
           ],
         ),
-        const Spacer()
+        const Spacer(),
         Container(
           height: 25, 
           width: 80, 
