@@ -118,6 +118,7 @@ class UpcomingTask extends StatelessWidget {
                       ),
                       ),
           ],
+        )
       ),
     );
   }
